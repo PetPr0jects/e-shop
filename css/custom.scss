@@ -1,5 +1,236 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
 $font: 'Iceland', cursive;
+$background: linear-gradient(90deg, #18C6DB, #11818E);
+$colorBright: #18C6DB;
+$colorDark: #11818E;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: $font;
+    background: $background;
+    max-width: 1920px;
+    margin-inline: auto;
+    color: white;
+    padding-bottom: 1000px;
+}
+
+.navbar{
+    margin: 30px 75px 0px;
+    padding: 0;
+    
+    @media (max-width: 992px) {
+        margin: 15px 30px 15px;
+    }
+}
+
+.navbar-toggler{
+    border: 1px solid white;
+}
+
+.bg-light {
+    background-color: rgba(#000, 0.0) !important;
+}
+
+.navbar-collapse{
+    font-size: 36px;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.navbar-brand{
+    text-shadow: -2px -1px #000;
+    font-size: 64px;
+    margin: 0;
+    padding: 0px 0px 10px 0px;
+}
+
+.nav-link.active{
+    margin-right: 75px;
+    @media (max-width: 992px) {
+        display: none !important;
+    }
+}
+
+#cart{
+    position: relative; 
+    
+    #cartAmount{
+        color: $colorBright;
+        position: absolute;
+        right: 4px;
+        top: 10px;
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 12px;
+    }
+    
+}
+
+
+#navbarDropdown{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.dropdown-menu{
+    border: 0;
+}
+
+.dropdown-item{
+    color: $colorBright;
+    &:hover{
+        color: $colorDark;
+    }
+}
+
+.me-auto{
+    margin-right: 75px !important;
+    margin-left: auto !important;
+}
+
+.form-control.me-2{
+    border-radius: 30px;
+    box-shadow: inset 0 0 3px #000000;
+}
+
+.btn-outline-success{
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    &:hover{
+        background-color: white;
+        color: $colorDark;
+    }
+}
+
+#floatingCart{
+    @media (min-width: 992px) {
+        display: none;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+	bottom: 30px;
+	right: 30px;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+	border-radius: 50px;
+    border: 2px solid white;
+    
+    #floatingCartImg{
+        width: 30px;
+        height: 30px;
+    }
+    
+    #floatingCartAmount{
+        color: $colorDark;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 12px;
+    }
+}
+
+#carouselExampleControls{
+    width: 90%;
+    height: 300px;
+    margin-top: 30px;
+    margin-inline: auto;
+
+    img{
+        width: 1600px;
+        height: 300px;
+    }
+
+    @media (max-width: 992px) {
+        width: 90%;
+        height: 50%;
+        margin-top: 20px;
+        margin-inline: auto;
+    
+        img{
+            width: 1600px;
+            height: 50%;
+        }
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+#trendingLink{
+    color: white;
+    margin-left: 75px;
+    font-size: 48px;
+    text-shadow: -2px -1px #000;
+    text-decoration: none;
+}
+
+.trendingItems{
+    display: flex;
+    justify-content: space-between;
+    color: $colorDark;
+    margin-inline: 75px;
+}
+
+.card{
+    width: 220px;
+    .itemImg{
+        width: 100%;
+    }
+}
+
+.itemInfo{
+    width: 80%;
+    margin-inline: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemName{
+    margin-inline: 10%;
+    font-size: 20px;
+}
+
+.priceTag{
+    width: fit-content;
+}
+
+.toCartBtn{
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    background-color: $colorBright;
+    border: 0;
+    border-radius: 50px;
 }
