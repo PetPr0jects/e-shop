@@ -19,7 +19,7 @@ body {
   padding: 0;
 }
 
-@media (max-width: 992px) {
+@media all and (max-width: 992px) {
   .navbar {
     margin: 15px 30px 15px;
   }
@@ -52,7 +52,7 @@ body {
   margin-right: 75px;
 }
 
-@media (max-width: 992px) {
+@media all and (max-width: 992px) {
   .nav-link.active {
     display: none !important;
   }
@@ -150,7 +150,7 @@ body {
   border: 2px solid white;
 }
 
-@media (min-width: 992px) {
+@media all and (min-width: 992px) {
   #floatingCart {
     display: none;
   }
@@ -190,7 +190,7 @@ body {
   font-size: 48px;
 }
 
-@media (max-witdh: 992px) {
+@media all and (max-width: 992px) {
   .cartTitle {
     margin-inline: 30px;
   }
@@ -199,12 +199,12 @@ body {
 .cartForm {
   border-radius: 20px;
   background-color: white;
-  margin-inline: 75px;
+  margin: 0px 75px;
 }
 
-@media (max-witdh: 992px) {
+@media all and (max-width: 992px) {
   .cartForm {
-    margin-inline: 30px;
+    margin: 0px 30px;
   }
 }
 
@@ -228,21 +228,31 @@ body {
   color: #11818E;
 }
 
-@media (max-width: 992px) {
-  .item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 .itemPhoto {
   margin-inline: 25px;
 }
 
+@media all and (max-width: 992px) {
+  .itemPhoto {
+    width: 30%;
+    margin-inline: 5px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .itemName {
+    font-size: 10px;
+  }
+}
+
 .itemPrice {
   margin-left: auto;
+}
+
+@media all and (max-width: 992px) {
+  .itemPrice {
+    font-size: 14px;
+  }
 }
 
 .counter {
@@ -266,12 +276,30 @@ body {
   margin: 10px 0;
 }
 
+@media all and (max-width: 992px) {
+  .counter data {
+    margin: 5px 0;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .counter {
+    margin-inline: 10px;
+  }
+}
+
 .divider {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .divider img {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .counterBtn {
@@ -285,9 +313,19 @@ body {
   background: transparent;
 }
 
+@media all and (max-width: 992px) {
+  .counterBtn {
+    width: 150%;
+  }
+}
+
 .deleteBtnDiv button {
   border: 0;
   background: transparent;
+}
+
+.deleteBtnDiv button img {
+  width: 100%;
 }
 
 .itemContorl {
@@ -298,6 +336,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media all and (max-width: 992px) {
+  .itemContorl {
+    margin-right: 10px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .plusBtn, .minusBtn {
+    width: 100%;
+  }
 }
 
 .total {
