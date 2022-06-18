@@ -45,7 +45,7 @@ body{
 }
 
 .navbar-brand{
-    text-shadow: -2px -1px #000;
+    text-shadow: -2px -1px $colorDark;
     font-size: 64px;
     margin: 0;
     padding: 0px 0px 10px 0px;
@@ -105,7 +105,7 @@ body{
 
 .form-control.me-2{
     border-radius: 30px;
-    box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px $colorDark;
 }
 
 .btn-outline-success{
@@ -130,7 +130,7 @@ body{
 	right: 30px;
     width: 45px;
     height: 45px;
-    background: transparent;
+    background: linear-gradient(180deg, #18C6DB, #11818E);
 	border-radius: 50px;
     border: 2px solid white;
     
@@ -190,19 +190,61 @@ body{
     color: white;
     margin-left: 75px;
     font-size: 48px;
-    text-shadow: -2px -1px #000;
+    text-shadow: -2px -1px $colorDark;
     text-decoration: none;
+    @media (max-width: 992px) {
+        margin-inline: 30px;
+    }
 }
 
 .trendingItems{
-    display: flex;
-    justify-content: space-between;
+    .imageBg{
+        margin: 5%;
+        background-color: $colorBright;
+        border-radius: 5px;
+    }
     color: $colorDark;
-    margin-inline: 75px;
+    @media (min-width: 2640px) {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        margin-inline: 75px;        
+        gap: 10px;
+    }
+    @media (max-width: 2640px) {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        margin-inline: 75px;        
+        gap: 10px;
+    }
+    @media (max-width: 1540px) {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);;
+        gap: 10px;
+        margin-inline: 75px;    
+    }
+    @media (max-width: 1350px) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);;
+        gap: 10px;
+        margin-inline: 75px;    
+    }
+    @media (max-width: 1140px) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);;
+        gap: 10px;
+        margin-inline: 75px;    
+    }
+    @media (max-width: 992px) {
+        margin-left: 15px;
+        margin-right: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
 }
 
 .card{
-    width: 220px;
+    width: 170px;
+    margin-inline: auto;
     .itemImg{
         width: 100%;
     }
@@ -210,15 +252,15 @@ body{
 
 .itemInfo{
     width: 80%;
-    margin-inline: 10%;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    margin-inline: auto;
     align-items: center;
 }
 
 .itemName{
-    margin-inline: 10%;
+    margin-inline: 5%;
     font-size: 20px;
 }
 

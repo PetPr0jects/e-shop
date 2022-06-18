@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap-5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <title>E-shop | Buy anything!</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">E-shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" id="cartItem">
+                    <div class="nav-link active" aria-current="page" href="#" id="cart">
+                        <a href="cart.html">
+                            <img src="images/cart.svg" alt="cart">
+                            <data aria-label="Items-in-your-cart" id="cartAmount">3</data>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catalog</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Laptops</a></li>
+                        <li><a class="dropdown-item" href="#">PC's</a></li>
+                        <li><a class="dropdown-item" href="#">PC parts</a></li>
+                        <li><a class="dropdown-item" href="#">Discount items</a></li>
+                    </ul>
+                </li>
+            </ul>
+                <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="cartTitle">
+        <p>Cart</p>
+    </div>
+    <div class="cartForm">
+        <div class="items">
+            <ul>
+                <li class="cartItems">
+                    <div class="item">
+                        <img src="images/item.png" alt="item-photo" class="itemPhoto">
+                        <span class="itemName">Samsung Trio 500 / E124SPMP</span>
+                        <span class="itemPrice">3.990KZT</span>
+                        <div class="itemContorl">
+                            <div class="counter">
+                                <button class="counterBtn">
+                                    <img src="images/plusBtn.svg" alt="plus-button" class="plusBtn">
+                                </button>
+                                <data aria-label="item-counter" class="itemCounter">1</data>
+                                <button class="counterBtn">
+                                    <img src="images/minusBtn.svg" alt="minus-button" class="minusBtn">
+                                </button>
+                            </div>
+                            <div class="deleteBtnDiv">
+                                <button class="deleteBtn">
+                                    <img src="images/deleteBtn.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <img src="images/divider.svg" alt="divider">
+                    </div>
+                    <div class="item">
+                        <img src="images/item.png" alt="item-photo" class="itemPhoto">
+                        <span class="itemName">Samsung Trio 500 / E124SPMP</span>
+                        <span class="itemPrice">3.990KZT</span>
+                        <div class="itemContorl">
+                            <div class="counter">
+                                <button class="counterBtn">
+                                    <img src="images/plusBtn.svg" alt="plus-button" class="plusBtn">
+                                </button>
+                                <data aria-label="item-counter" class="itemCounter">1</data>
+                                <button class="counterBtn">
+                                    <img src="images/minusBtn.svg" alt="minus-button" class="minusBtn">
+                                </button>
+                            </div>
+                            <div class="deleteBtnDiv">
+                                <button class="deleteBtn">
+                                    <img src="images/deleteBtn.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="total">Total
+        </div>
+    </div>
+
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <script src="lib/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
