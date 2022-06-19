@@ -228,6 +228,7 @@ body{
     }
     @media all and (max-width: 992px) {
         margin-inline: 10px;
+        width: fit-content;
     }
 }
 
@@ -246,7 +247,7 @@ body{
     border: 0;
     background: transparent;
         @media all and (max-width: 992px) {
-            width: 150%;
+            width: 100%;
         }
 }
 
@@ -254,10 +255,18 @@ body{
     button{
     border: 0;
     background: transparent;
+    @media all and (max-width: 992px) {
         img{
-            width: 100%;            
+            width: 80%;            
         }
     }
+    }
+}
+
+.deleteBtn{
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
 }
 
 .itemContorl{
@@ -275,9 +284,59 @@ body{
     }
 }
 
+.customerTotalText{
+    margin-left: 40px;
+    @media all and (max-width: 992px) {
+        margin-left: 20px;
+    }
+}
+
+.customerTotalPrice{
+    margin-right: 140px;
+    float: right;
+    @media all and (max-width: 992px) {
+        margin-right: 50px;
+    }
+}
+
+.purchaseBtn{
+    display: flex;
+    justify-content: center;
+    button{
+        padding-inline: 20px;
+        color: white;
+        border: 0;
+        background-color: $colorDark;
+        border-radius: 10px;
+    }
+    @media all and (max-width: 992px) {
+        margin-top: 10px;
+    }
+}
+
 .total{
+    width: 100%;
+    padding-bottom: 20px;
     color: $colorDark;
-    width: fit-content;
-    margin-inline: auto;
     font-size: 32px;
+    @media all and (max-width: 992px) {
+        font-size: 16px;
+    }
+}
+
+.emptyCart{
+    font-size: 48px;
+    color: $colorDark;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    @media all and (max-width: 992px) {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+    img{
+        width: 20%;
+    }
 }

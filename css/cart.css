@@ -285,6 +285,9 @@ body {
 @media all and (max-width: 992px) {
   .counter {
     margin-inline: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
@@ -315,7 +318,7 @@ body {
 
 @media all and (max-width: 992px) {
   .counterBtn {
-    width: 150%;
+    width: 100%;
   }
 }
 
@@ -324,8 +327,20 @@ body {
   background: transparent;
 }
 
-.deleteBtnDiv button img {
-  width: 100%;
+@media all and (max-width: 992px) {
+  .deleteBtnDiv button img {
+    width: 80%;
+  }
+}
+
+.deleteBtn {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .itemContorl {
@@ -350,12 +365,88 @@ body {
   }
 }
 
+.customerTotalText {
+  margin-left: 40px;
+}
+
+@media all and (max-width: 992px) {
+  .customerTotalText {
+    margin-left: 20px;
+  }
+}
+
+.customerTotalPrice {
+  margin-right: 140px;
+  float: right;
+}
+
+@media all and (max-width: 992px) {
+  .customerTotalPrice {
+    margin-right: 50px;
+  }
+}
+
+.purchaseBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.purchaseBtn button {
+  padding-inline: 20px;
+  color: white;
+  border: 0;
+  background-color: #11818E;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 992px) {
+  .purchaseBtn {
+    margin-top: 10px;
+  }
+}
+
 .total {
+  width: 100%;
+  padding-bottom: 20px;
   color: #11818E;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-inline: auto;
   font-size: 32px;
+}
+
+@media all and (max-width: 992px) {
+  .total {
+    font-size: 16px;
+  }
+}
+
+.emptyCart {
+  font-size: 48px;
+  color: #11818E;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+@media all and (max-width: 992px) {
+  .emptyCart {
+    font-size: 20px;
+    padding: 15px 0;
+  }
+}
+
+.emptyCart img {
+  width: 20%;
 }
 /*# sourceMappingURL=cart.css.map */
